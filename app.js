@@ -1,4 +1,4 @@
-const el = document.querySelector(".hi");
+const el = document.querySelector(".child");
 let body = document.querySelector("body");
 let image = '';
 let fact = '';
