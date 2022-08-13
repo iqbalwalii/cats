@@ -2,6 +2,7 @@ const el = document.querySelector(".child");
 let body = document.querySelector("body");
 let image = '';
 let fact = '';
+
 fetch('https://catfact.ninja/fact')
   .then((response) => response.json())
     .then((data) => {
@@ -16,4 +17,8 @@ fetch('https://api.thecatapi.com/v1/images/search')
         console.log(data);
         image = data[0].url;
         document.body.style.backgroundImage = `url(${image})`;
-    }).catch((error) => {console.log(error) });
+    }).catch((error) => { console.log(error) });
+    
+setTimeout(function () {
+    location.reload();
+} , 10000);
